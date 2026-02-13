@@ -1,3 +1,5 @@
+import { useEffect, useRef, useState } from 'react'
+
 const outcomes = [
   {
     title: 'Margin intelligence',
@@ -31,9 +33,42 @@ const outcomes = [
   },
 ]
 
+function useInView(threshold = 0.2) {
+  const ref = useRef(null)
+  const [inView, setInView] = useState(false)
+
+  useEffect(() => {
+    const el = ref.current
+    if (!el) return
+
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    if (prefersReduced) {
+      setInView(true)
+      return
+    }
+
+    const obs = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) setInView(true)
+      },
+      { threshold, rootMargin: '0px 0px -120px 0px' }
+    )
+    obs.observe(el)
+    return () => obs.disconnect()
+  }, [threshold])
+
+  return [ref, inView]
+}
+
 export default function SectionOutcomes() {
+  const [sectionRef, inView] = useInView(0.2)
+
   return (
-    <section className="section section-outcomes" aria-labelledby="outcomes-title">
+    <section
+      ref={sectionRef}
+      className={`section section-outcomes ${inView ? 'section-outcomes--visible' : ''}`}
+      aria-labelledby="outcomes-title"
+    >
       <h2 id="outcomes-title" className="section__title section__title--center">
         The Edge: Outcomes That Compound
       </h2>
@@ -41,8 +76,12 @@ export default function SectionOutcomes() {
         Executive-grade intelligence for margin, risk, and speed. The clarity C-suite needs to act—and the confidence boards expect.
       </p>
       <div className="outcomes__grid">
-        {outcomes.map(({ title, quote, text }) => (
-          <article key={title} className="outcome-card">
+        {outcomes.map(({ title, quote, text }, index) => (
+          <article
+            key={title}
+            className="outcome-card"
+            style={{ transitionDelay: `${index * 90}ms` }}
+          >
             <h3 className="outcome-card__title">{title}</h3>
             <p className="outcome-card__quote">{quote}</p>
             <p className="outcome-card__text">{text}</p>

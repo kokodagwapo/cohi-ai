@@ -1554,7 +1554,9 @@
   border: 1px solid var(--glass-border);
   border-left: 4px solid var(--coheus-blue);
   box-shadow: var(--glass-shadow);
-  transition: border-color 0.2s, box-shadow 0.25s, transform 0.2s ease;
+  transition: border-color 0.2s, box-shadow 0.25s, transform 0.2s ease, opacity 0.6s ease;
+  opacity: 0;
+  transform: translateY(18px);
 }
 
 @media (min-width: 600px) {
@@ -1569,6 +1571,11 @@
     0 8px 24px rgba(0, 0, 0, 0.06),
     0 12px 40px rgba(0, 51, 160, 0.12);
   transform: translateY(-2px);
+}
+
+.section-outcomes--visible .outcome-card {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1646,6 +1653,9 @@
 .ugc-section__card {
   margin: 0;
   text-align: center;
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 .ugc-section__frame {
@@ -1661,6 +1671,11 @@
 
 .ugc-section__card:hover .ugc-section__frame {
   box-shadow: 0 8px 32px rgba(0, 51, 160, 0.1);
+}
+
+.ugc-section--visible .ugc-section__card {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .ugc-section__img {
@@ -1915,10 +1930,40 @@
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .ugc-section__card,
+  .outcome-card {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
 /* Contact section – Terra Verde style */
 /* Contact section - elegant card layout */
 .section-contact {
   text-align: center;
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.section-contact::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('/ugc/moneyball-ball-in-glove-left.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.08;
+  pointer-events: none;
+  z-index: 0;
+}
+
+[data-theme='dark'] .section-contact::before {
+  opacity: 0.05;
 }
 
 .section-contact__lead {
@@ -1927,6 +1972,8 @@
   margin: 0 auto 0.75rem;
   max-width: 28em;
   line-height: 1.6;
+  position: relative;
+  z-index: 1;
 }
 
 .section-contact__company {
@@ -1937,6 +1984,8 @@
   letter-spacing: 0.02em;
   padding: 0 0.5rem;
   text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
 @media (min-width: 480px) {
@@ -1952,6 +2001,8 @@
   gap: 0.75rem;
   max-width: 480px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
 @media (min-width: 480px) {
@@ -2045,6 +2096,8 @@ a.section-contact__card:hover .section-contact__value {
   padding: 2.5rem 1.5rem 2.5rem;
   background: #ffffff;
   border-top: 1px solid #e5e7eb;
+  scroll-snap-align: end;
+  scroll-snap-stop: always;
 }
 
 [data-theme='dark'] .footer {

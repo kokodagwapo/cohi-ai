@@ -1,3 +1,5 @@
+import { useEffect, useRef, useState } from 'react'
+
 const UGC_ITEMS = [
   { src: '/brand/brand-24.png', title: 'Executive Briefing', caption: 'AI-curated insights by urgency—Critical, Needs Attention, What\'s Working, Context & Trends. See what moves the needle before it shows up in P&L.' },
   { src: '/brand/brand-12.png', title: 'Revenue by LO: The Pareto', caption: 'Identify who carries the load—e.g., 9 loan officers carrying 44. Top/Second/Bottom tier breakdown reveals hidden value and concentration risk.' },
@@ -7,9 +9,43 @@ const UGC_ITEMS = [
   { src: '/brand/brand-09.png', title: 'TopTiering Comparison & Workbench', caption: 'Compare branch revenue tiers, spot performance gaps, and analyze cohorts. Desktop + mobile—your edge wherever you are.' },
 ]
 
+function useInView(threshold = 0.2) {
+  const ref = useRef(null)
+  const [inView, setInView] = useState(false)
+
+  useEffect(() => {
+    const el = ref.current
+    if (!el) return
+
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    if (prefersReduced) {
+      setInView(true)
+      return
+    }
+
+    const obs = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) setInView(true)
+      },
+      { threshold, rootMargin: '0px 0px -120px 0px' }
+    )
+    obs.observe(el)
+    return () => obs.disconnect()
+  }, [threshold])
+
+  return [ref, inView]
+}
+
 export default function SectionUgc() {
+  const [sectionRef, inView] = useInView(0.2)
+
   return (
-    <section id="cohi-in-action" className="section section--alt ugc-section" aria-labelledby="ugc-section-title">
+    <section
+      ref={sectionRef}
+      id="cohi-in-action"
+      className={`section section--alt ugc-section ${inView ? 'ugc-section--visible' : ''}`}
+      aria-labelledby="ugc-section-title"
+    >
       <h2 id="ugc-section-title" className="section__title section__title--center">
         The Stats: Intelligence That Pays
       </h2>
@@ -17,8 +53,12 @@ export default function SectionUgc() {
         Mortgage-native metrics that separate winners from the field—briefings, TopTiering, and pipeline visibility built for lenders who play the percentages.
       </p>
       <div className="ugc-section__grid">
-        {UGC_ITEMS.map(({ src, title, caption }) => (
-          <figure key={src} className="ugc-section__card">
+        {UGC_ITEMS.map(({ src, title, caption }, index) => (
+          <figure
+            key={src}
+            className="ugc-section__card"
+            style={{ transitionDelay: `${index * 90}ms` }}
+          >
             <div className="ugc-section__frame">
               <img
                 src={src}
