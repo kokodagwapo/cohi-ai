@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { useLocation } from 'react-router-dom'
+import { useLocation, Link } from 'react-router-dom'
 import Hero from '../components/Hero'
 import SectionOutcomes from '../components/SectionOutcomes'
 import SectionUgc from '../components/SectionUgc'
@@ -22,6 +22,18 @@ export default function HomePage() {
       <div className="snap-section" id="hero">
         <Hero />
       </div>
+      <section className="section">
+        <div className="section__content">
+          <Link
+            to="https://cohi-dev.coheus1.com/"
+            className="cta"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View the App
+          </Link>
+        </div>
+      </section>
       <div className="snap-section" id="cohi-in-action">
         <SectionUgc />
       </div>
