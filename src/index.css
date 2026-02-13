@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
+
+:root {
+  /* Brand – from plan (PMS 286, PMS 368) */
+  --coheus-blue: #0033A0;
+  --coheus-green: #00A651;
+  --coheus-blue-soft: rgba(0, 51, 160, 0.08);
+  --coheus-green-soft: rgba(0, 166, 81, 0.08);
+
+  /* UI */
+  --glass-bg: rgba(255, 255, 255, 0.18);
+  --glass-border: rgba(255, 255, 255, 0.35);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+  --nav-active-bg: #e8e0f0;
+  --nav-active-text: #1a1a2e;
+  --overlay-bg: rgba(0, 0, 0, 0.4);
+  --text-primary: #1a1a2e;
+  --text-secondary: #4a4a5e;
+  --text-muted: #6b6b7b;
+  --bg-page: #ffffff;
+  --bg-section: #f8f9fb;
+  --border-light: #e8eaef;
+
+  /* Moneyball theme tints – The Edge section (ballpark: warm cream top, grass mid) */
+  --moneyball-warm: #f5f0e6;
+  --moneyball-grass: #e3ebe3;
+
+  /* Typography */
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--text-primary);
+  background-color: var(--bg-page);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[data-theme="dark"] {
+  --glass-bg: rgba(18, 18, 26, 0.55);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  --text-primary: #f0f0f5;
+  --text-secondary: #c0c0d0;
+  --text-muted: #9090a0;
+  --bg-page: #12121a;
+  --bg-section: #1a1a24;
+  --border-light: #2a2a38;
+  --nav-active-bg: #2a2540;
+  --nav-active-text: #e8e0f0;
+  --moneyball-warm: #141a22;
+  --moneyball-grass: #161c26;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: hidden;
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+}
+
+body.drawer-open {
+  overflow: hidden;
+}
+
+a {
+  color: var(--coheus-blue);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Focus for accessibility */
+:focus-visible {
+  outline: 2px solid var(--coheus-blue);
+  outline-offset: 2px;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--coheus-blue);
+  outline-offset: 2px;
+}
