@@ -558,7 +558,7 @@
 
 .hero__header-group {
   position: absolute;
-  top: calc(1.25rem + 96px);
+  top: calc(1.25rem + 24px);
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
@@ -1293,7 +1293,7 @@
 /* Scroll Hint */
 .hero__scroll-hint {
   position: absolute;
-  bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+  bottom: calc(1rem + env(safe-area-inset-bottom, 0px) + 96px);
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -1315,7 +1315,7 @@
 
 @media (min-width: 640px) {
   .hero__scroll-hint {
-    bottom: 1.5rem;
+    bottom: calc(1.5rem + 96px);
   }
 }
 
