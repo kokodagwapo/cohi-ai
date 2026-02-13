@@ -10,6 +10,8 @@ import HowItWorksPage from './pages/HowItWorksPage'
 import ExecutiveValuePage from './pages/ExecutiveValuePage'
 import PricingPage from './pages/PricingPage'
 import ResourcesPage from './pages/ResourcesPage'
+import TermsPage from './pages/TermsPage'
+import PrivacyPage from './pages/PrivacyPage'
 import './App.css'
 
 function Layout({ theme, onThemeToggle }) {
@@ -27,6 +29,8 @@ function Layout({ theme, onThemeToggle }) {
           <Route path="/executive-value" element={<ExecutiveValuePage />} />
           <Route path="/pricing" element={<PricingPage />} />
           <Route path="/resources" element={<ResourcesPage />} />
+          <Route path="/terms" element={<TermsPage />} />
+          <Route path="/privacy" element={<PrivacyPage />} />
         </Routes>
         <Footer />
       </main>

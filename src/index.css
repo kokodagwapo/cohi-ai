@@ -20,6 +20,9 @@
   --bg-page: #ffffff;
   --bg-section: #f8f9fb;
   --border-light: #e8eaef;
+  --footer-bg: #d1d7e0;
+  --footer-border: #b8c1ce;
+  --footer-text: #2d3040;
 
   /* Moneyball theme tints – The Edge section (ballpark: warm cream top, grass mid) */
   --moneyball-warm: #f5f0e6;
@@ -47,6 +50,9 @@
   --bg-page: #12121a;
   --bg-section: #1a1a24;
   --border-light: #2a2a38;
+  --footer-bg: #0f0f14;
+  --footer-border: #252530;
+  --footer-text: #c8c8d8;
   --nav-active-bg: #2a2540;
   --nav-active-text: #e8e0f0;
   --moneyball-warm: #141a22;
