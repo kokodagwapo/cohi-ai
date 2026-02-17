@@ -67,8 +67,8 @@ export default function Hero() {
               <div className="hero__card-tag-row">
                 <span className="hero__inline-tag yellow">32.8 Conditions per active loan</span>
                 <div className="hero__mini-stats">
-                  <div><span>$</span> create</div>
-                  <div>Recent Average 2.8s</div>
+                  <div>Prior Avg: 18.4</div>
+                  <div>Threshold: 5 per loan</div>
                 </div>
               </div>
             </div>
