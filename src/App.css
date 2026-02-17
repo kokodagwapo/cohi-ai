@@ -621,7 +621,7 @@
 .hero__side-cards--left {
   position: absolute;
   left: 5%;
-  top: 2%;
+  top: 12%;
   transform: rotateY(25deg);
   display: flex;
   flex-direction: column;
@@ -631,12 +631,13 @@
 
 .hero__floating-card {
   width: 380px;
-  padding: 1.1rem 1.4rem;
+  padding: 1.5rem 1.4rem;
   border-radius: 16px;
   animation: floatLeft 8s ease-in-out infinite;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  min-height: 120px;
 }
 
 .hero__floating-card--urgent {
