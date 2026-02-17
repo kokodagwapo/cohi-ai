@@ -102,6 +102,15 @@ export default function SectionAboutCoheus() {
   return (
     <section id="about-coheus" className="section section-about-coheus section-about-coheus--storyboard" aria-labelledby="about-coheus-title">
       <div className="section-about-coheus__inner">
+        <header ref={headerRef} className={`section-about-coheus__header ${headerInView ? 'section-about-coheus__header--visible' : ''}`}>
+          <h2 id="about-coheus-title" className="section__title section__title--center">
+            TopTiering
+          </h2>
+          <p className="section-about-coheus__header-lead">
+            A structured framework for ranking and coaching loan officer performance—so lenders can align compensation to results and invest where it matters.
+          </p>
+        </header>
+
         <div className="section-about-coheus__storyboard">
           {TOPTIERING_PANELS.map((panel, i) => (
             <StoryboardPanel key={panel.id} panel={panel} index={i} />

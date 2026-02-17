@@ -1729,11 +1729,21 @@
 .section-about-coheus__panel {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.25rem;
+  gap: 1.5rem;
   align-items: center;
+  background: #fff;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
   opacity: 0;
   transform: translateX(-30px);
   transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.3s ease;
+}
+
+[data-theme="dark"] .section-about-coheus__panel {
+  background: var(--glass-bg);
+  border-color: var(--glass-border);
 }
 
 .section-about-coheus__panel--right {
@@ -1746,17 +1756,22 @@
 }
 
 .section-about-coheus__panel:hover {
-  isolation: isolate;
+  box-shadow: 0 8px 32px rgba(0, 51, 160, 0.08);
 }
 
 @media (min-width: 768px) {
+  .section-about-coheus__panel {
+    padding: 2rem 2.5rem;
+    gap: 2.5rem;
+  }
+
   .section-about-coheus__panel--left {
-    grid-template-columns: 0.45fr 0.55fr;
+    grid-template-columns: 1.1fr 0.9fr;
     grid-template-areas: 'media content';
   }
 
   .section-about-coheus__panel--right {
-    grid-template-columns: 0.55fr 0.45fr;
+    grid-template-columns: 0.9fr 1.1fr;
     grid-template-areas: 'content media';
   }
 
@@ -1779,54 +1794,49 @@
 
 .section-about-coheus__panel-frame {
   position: relative;
-  border-radius: 16px;
+  border-radius: 12px;
   overflow: hidden;
-  background: var(--glass-bg);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid var(--glass-border);
-  box-shadow: var(--glass-shadow);
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  background: transparent;
+  transition: transform 0.35s ease;
 }
 
 .section-about-coheus__panel:hover .section-about-coheus__panel-frame {
-  transform: scale(1.02);
-  box-shadow: 0 16px 48px rgba(0, 51, 160, 0.12);
+  transform: scale(1.01);
 }
 
 .section-about-coheus__panel-img {
   width: 100%;
   height: auto;
   display: block;
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
-  object-position: center top;
+  object-fit: contain;
+  border-radius: 8px;
 }
 
 .section-about-coheus__panel-content {
-  padding: 0 0.5rem;
+  padding: 0;
 }
 
 .section-about-coheus__panel-title {
-  font-size: 1.25rem;
-  font-weight: 700;
+  font-size: clamp(1.25rem, 2.2vw, 1.75rem);
+  font-weight: 800;
   color: var(--text-primary);
   margin: 0 0 0.5rem;
   letter-spacing: -0.02em;
+  line-height: 1.2;
 }
 
 .section-about-coheus__panel-tagline {
-  font-size: 0.9375rem;
+  font-size: clamp(0.875rem, 1.2vw, 1.0625rem);
   font-weight: 600;
-  color: var(--coheus-blue);
+  color: var(--coheus-green, #00A651);
   margin: 0 0 0.75rem;
   font-style: italic;
 }
 
 .section-about-coheus__panel-copy {
-  font-size: 0.9375rem;
+  font-size: clamp(0.875rem, 1.1vw, 1rem);
   color: var(--text-secondary);
-  line-height: 1.65;
+  line-height: 1.7;
   margin: 0;
 }
 
@@ -1886,6 +1896,10 @@
 
   .section-about-coheus__panel:hover .section-about-coheus__panel-frame {
     transform: none;
+  }
+
+  .section-about-coheus__panel:hover {
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.05);
   }
 }
 
