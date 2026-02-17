@@ -1076,25 +1076,28 @@
   }
 }
 
-.hero__phone-wrap {
+.hero__phone-text-block {
   position: absolute;
-  bottom: clamp(100px, 12vw, 180px);
-  right: 5%;
-  width: clamp(180px, 17vw, 240px);
+  bottom: clamp(80px, 10vw, 160px);
+  right: 3%;
+  width: clamp(200px, 18vw, 260px);
   z-index: 40;
-  animation: floatPhone 6s ease-in-out infinite;
-  animation-delay: 1s;
-  transition: transform var(--hero-transition);
 }
 
-.hero__phone-image {
-  width: 100%;
-  height: auto;
-  border-radius: 42px;
-  /* box-shadow removed to avoid rectangular shadow artifact with multiply blend */
-  mix-blend-mode: multiply;
-  display: block;
-  background: transparent;
+.hero__phone-text-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #111;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.3;
+}
+
+.hero__phone-text-desc {
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: #222;
+  line-height: 1.55;
+  margin: 0;
 }
 
 /* Redundant phone header/content styles removed since we use exact images */
