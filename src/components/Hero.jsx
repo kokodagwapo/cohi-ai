@@ -45,7 +45,7 @@ export default function Hero() {
                 <div className="hero__card-controls"><span>+</span> <span>🕗</span></div>
               </div>
               <p className="hero__card-main-text">
-                20 loans totaling $7.55M flagged as at-risk for late closing within the next 10 business days.
+                20 loans totaling $7.55M flagged at-risk for late closing within 10 business days.
               </p>
               <div className="hero__card-bar-container">
                 <div className="hero__card-bar">
@@ -62,7 +62,7 @@ export default function Hero() {
                 <div className="hero__card-controls"><span>+</span> <span>🕗</span></div>
               </div>
               <p className="hero__card-main-text">
-                Outstanding conditions per active loan rose to 32.8 on average, above the 5-condition threshold per loan.
+                Conditions per active loan averaged 32.8, above the 5-condition threshold.
               </p>
               <div className="hero__card-tag-row">
                 <span className="hero__inline-tag yellow">32.8 Conditions per active loan</span>
@@ -80,7 +80,7 @@ export default function Hero() {
                 <div className="hero__card-controls"><span>+</span> <span>🕗</span></div>
               </div>
               <p className="hero__card-main-text">
-                Pipeline pull-through rate holding steady, with 135 of 246 loans converting to funded status.
+                135 of 246 loans converted to funded status this period.
               </p>
             </div>
           </div>

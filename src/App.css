@@ -507,19 +507,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 1.5rem 1rem;
+  justify-content: flex-start;
+  padding: 6rem 1rem 1.5rem;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
   background: white;
   box-sizing: border-box;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
 @media (min-width: 600px) {
   .hero {
-    padding: 2rem 1.5rem;
+    padding: 6.5rem 1.5rem 2rem;
   }
 }
 
@@ -549,8 +549,8 @@
 
 .hero__header-group {
   text-align: center;
-  margin-top: 1.25rem;
-  margin-bottom: 2rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .hero__title {
@@ -584,11 +584,11 @@
 .hero__scene-container {
   position: relative;
   width: 100%;
-  height: clamp(500px, 60vw, 750px);
+  min-height: clamp(600px, 68vw, 860px);
   display: flex;
   perspective: var(--hero-perspective);
   transform-style: preserve-3d;
-  margin-top: -2rem;
+  margin-top: 0;
 }
 
 /* Glow Lines */
@@ -618,22 +618,22 @@
 .hero__side-cards--left {
   position: absolute;
   left: 5%;
-  top: 48%;
-  transform: translateY(-50%) rotateY(25deg);
+  top: 4%;
+  transform: rotateY(25deg);
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 0.75rem;
   z-index: 10;
 }
 
 .hero__floating-card {
-  width: 340px;
-  padding: 1.25rem;
-  border-radius: 18px;
+  width: 320px;
+  padding: 0.85rem 1.1rem;
+  border-radius: 16px;
   animation: floatLeft 8s ease-in-out infinite;
   display: flex;
   flex-direction: column;
-  gap: 0.6rem;
+  gap: 0.4rem;
 }
 
 .hero__floating-card--urgent {
@@ -709,11 +709,11 @@
 }
 
 .hero__card-main-text {
-  font-size: 1rem;
-  line-height: 1.5;
-  color: #0f172a; /* Darkened significantly */
+  font-size: 0.875rem;
+  line-height: 1.45;
+  color: #0f172a;
   margin: 0;
-  font-weight: 500; /* Added weight for readability */
+  font-weight: 500;
 }
 
 /* Progress Bar */
@@ -1191,7 +1191,7 @@
 @media (max-width: 1200px) {
   .hero__side-cards--left {
     left: 0;
-    transform: translateY(-50%) rotateY(15deg) scale(0.9);
+    transform: rotateY(15deg) scale(0.9);
   }
 
   .hero__laptop-wrap {
