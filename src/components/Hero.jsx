@@ -42,12 +42,9 @@ export default function Hero() {
               <p className="hero__card-main-text">
                 20 loans totaling $7.55M flagged at-risk for late closing within 10 business days.
               </p>
-              <div className="hero__card-bar-container">
-                <div className="hero__card-bar">
-                  <div className="hero__card-bar-fill" style={{ width: '8.1%' }}></div>
-                </div>
-                <span className="hero__card-bar-label">20 / 246</span>
-              </div>
+              <p className="hero__card-detail-text">
+                20 of 246 total loans in pipeline. Estimated exposure: $7.55M requiring immediate review.
+              </p>
             </div>
 
             <div className="hero__floating-card hero__floating-card--attention glass-panel">
