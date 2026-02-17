@@ -630,13 +630,13 @@
 }
 
 .hero__floating-card {
-  width: 320px;
-  padding: 0.85rem 1.1rem;
+  width: 380px;
+  padding: 1.1rem 1.4rem;
   border-radius: 16px;
   animation: floatLeft 8s ease-in-out infinite;
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
+  gap: 0.5rem;
 }
 
 .hero__floating-card--urgent {
