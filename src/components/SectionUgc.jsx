@@ -1,6 +1,6 @@
 const UGC_ITEMS = [
   {
-    src: '/brand/cohi-insights-desktop.png',
+    src: '/brand/cohi-insights-briefing.png',
     headline: 'Your Daily Executive Briefing.',
     title: 'Cohi Insights',
     caption: 'AI-curated executive briefings by urgency—Critical, Needs Attention, What\'s Working, Context & Trends. See what moves the needle before it shows up in P&L.',
