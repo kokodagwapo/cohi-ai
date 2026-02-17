@@ -39,11 +39,6 @@ export default function Hero() {
           {/* Left Cards Stack */}
           <div className="hero__side-cards hero__side-cards--left">
             <div className="hero__floating-card hero__floating-card--urgent glass-panel">
-              <div className="hero__card-label">
-                <span className="hero__status-dot hero__status-dot--green">!</span>
-                <span className="hero__status-text">Urgent</span>
-                <div className="hero__card-controls"><span>+</span> <span>🕗</span></div>
-              </div>
               <p className="hero__card-main-text">
                 20 loans totaling $7.55M flagged at-risk for late closing within 10 business days.
               </p>
@@ -56,11 +51,6 @@ export default function Hero() {
             </div>
 
             <div className="hero__floating-card hero__floating-card--attention glass-panel">
-              <div className="hero__card-label">
-                <span className="hero__status-dot hero__status-dot--orange">!</span>
-                <span className="hero__status-text">Needs Attention</span>
-                <div className="hero__card-controls"><span>+</span> <span>🕗</span></div>
-              </div>
               <p className="hero__card-main-text">
                 Conditions per active loan averaged 32.8, above the 5-condition threshold.
               </p>
@@ -74,11 +64,6 @@ export default function Hero() {
             </div>
 
             <div className="hero__floating-card hero__floating-card--working glass-panel">
-              <div className="hero__card-label">
-                <span className="hero__status-dot hero__status-dot--blue">✓</span>
-                <span className="hero__status-text">What's Working</span>
-                <div className="hero__card-controls"><span>+</span> <span>🕗</span></div>
-              </div>
               <p className="hero__card-main-text">
                 135 of 246 loans converted to funded status this period. Average cycle time dropped to 32 days, with revenue on track at $400K across 106 active pipeline loans.
               </p>
@@ -90,19 +75,7 @@ export default function Hero() {
             {/* Top Right Info Card */}
             <div className="hero__info-card glass-panel">
               <div className="hero__info-card-content">
-                <div className="hero__info-icon">📑</div>
                 <p>Loan condition count averaged 32.8 per active file, surpassing the 5-condition review threshold.</p>
-              </div>
-              <div className="hero__info-tag-row">
-                <span className="hero__compact-tag">
-                  <span className="tag-x">✕</span> 32.8 Conditions per active loan
-                </span>
-                <div className="hero__check-group">
-                  <span className="check">✓</span>
-                  <span className="check">✓</span>
-                  <span className="check orange">✓</span>
-                  <span className="check highlighted">✓</span>
-                </div>
               </div>
             </div>
 
