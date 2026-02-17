@@ -13,7 +13,7 @@ const UGC_ITEMS = [
     caption: 'Identify who carries the load—e.g., 9 loan officers carrying 44. Top/Second/Bottom tier breakdown reveals hidden value and concentration risk.',
   },
   {
-    src: '/brand/brand-14.png',
+    src: '/brand/daily-briefing.png',
     headline: 'The Daily Briefing:',
     headlineSub: 'Actionable Intelligence Before Coffee',
     title: 'Daily Briefing',
