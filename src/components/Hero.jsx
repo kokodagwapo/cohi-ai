@@ -110,9 +110,12 @@ export default function Hero() {
               </div>
             </div>
 
-            <div className="hero__phone-text-block">
-              <h3 className="hero__phone-text-title">Mobile-Ready Insights</h3>
-              <p className="hero__phone-text-desc">Access your loan pipeline, conditions tracking, and executive briefings from any device — anytime, anywhere.</p>
+            <div className="hero__phone-wrap">
+              <img
+                src="/brand/hero-phone-screen.png"
+                alt="Cohi Insights Mobile"
+                className="hero__phone-image"
+              />
             </div>
           </div>
         </div>
