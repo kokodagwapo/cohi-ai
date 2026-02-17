@@ -1726,7 +1726,7 @@
 }
 
 .section-about-coheus--storyboard .section-about-coheus__inner {
-  max-width: 1100px;
+  max-width: 900px;
   margin: 0 auto;
   width: 100%;
 }
@@ -1863,7 +1863,7 @@
 }
 
 .section-about-coheus__panel-title {
-  font-size: clamp(1.375rem, 2.5vw, 1.875rem);
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
   font-weight: 800;
   color: var(--text-primary);
   margin: 0 0 0.4rem;
@@ -1872,7 +1872,7 @@
 }
 
 .section-about-coheus__panel-tagline {
-  font-size: clamp(0.8125rem, 1.1vw, 0.9375rem);
+  font-size: clamp(0.75rem, 0.95vw, 0.85rem);
   font-weight: 500;
   color: var(--coheus-green, #00A651);
   margin: 0 0 1rem;
@@ -1881,7 +1881,7 @@
 }
 
 .section-about-coheus__panel-copy {
-  font-size: clamp(0.875rem, 1vw, 0.9375rem);
+  font-size: clamp(0.8rem, 0.9vw, 0.875rem);
   color: var(--text-secondary);
   line-height: 1.75;
   margin: 0;
