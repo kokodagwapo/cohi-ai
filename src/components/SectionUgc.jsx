@@ -42,12 +42,6 @@ export default function SectionUgc() {
         {UGC_ITEMS.map(({ src, headline, headlineSub, title, caption }) => (
           <figure key={src} className="ugc-section__card">
             <div className="ugc-section__frame">
-              <div className="ugc-section__frame-header">
-                <h3 className="ugc-section__frame-headline">{headline}</h3>
-                {headlineSub && (
-                  <p className="ugc-section__frame-headline-sub">{headlineSub}</p>
-                )}
-              </div>
               <img
                 src={src}
                 alt=""
