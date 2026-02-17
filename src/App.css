@@ -1195,8 +1195,10 @@
 }
 
 [data-theme='dark'] .glass-panel {
-  background: rgba(18, 18, 26, 0.85);
-  border-color: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-color: rgba(255, 255, 255, 0.12);
 }
 
 [data-theme='dark'] .hero__card-main-text {
