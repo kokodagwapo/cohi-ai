@@ -45,7 +45,7 @@ export default function Hero() {
                 <div className="hero__card-controls"><span>+</span> <span>🕗</span></div>
               </div>
               <p className="hero__card-main-text">
-                20 loans totaling $7.55M are at risk of closing late within 10 days.
+                20 loans totaling $7.55M flagged as at-risk for late closing within the next 10 business days.
               </p>
               <div className="hero__card-bar-container">
                 <div className="hero__card-bar">
@@ -62,7 +62,7 @@ export default function Hero() {
                 <div className="hero__card-controls"><span>+</span> <span>🕗</span></div>
               </div>
               <p className="hero__card-main-text">
-                Average conditions per active loan increased to 32.8, exceeding 5 conditions per loan
+                Outstanding conditions per active loan rose to 32.8 on average, above the 5-condition threshold per loan.
               </p>
               <div className="hero__card-tag-row">
                 <span className="hero__inline-tag yellow">32.8 Conditions per active loan</span>
@@ -80,7 +80,7 @@ export default function Hero() {
                 <div className="hero__card-controls"><span>+</span> <span>🕗</span></div>
               </div>
               <p className="hero__card-main-text">
-                Pull-through rate at 55%, indicating coin conversion.
+                Pipeline pull-through rate holding steady, with 135 of 246 loans converting to funded status.
               </p>
             </div>
           </div>
@@ -91,7 +91,7 @@ export default function Hero() {
             <div className="hero__info-card glass-panel">
               <div className="hero__info-card-content">
                 <div className="hero__info-icon">📑</div>
-                <p>Average conditions per active loan increased to 32.8, exceeding 5 conditions per loan.</p>
+                <p>Loan condition count averaged 32.8 per active file, surpassing the 5-condition review threshold.</p>
               </div>
               <div className="hero__info-tag-row">
                 <span className="hero__compact-tag">
@@ -122,21 +122,21 @@ export default function Hero() {
               {/* Gauge Floating Card */}
               <div className="hero__gauge-card glass-panel">
                 <div className="hero__gauge-header">
-                  <span>+</span> 📈 <strong>Push-thru Working</strong>
+                  <span>+</span> 📈 <strong>Pull-Through Tracker</strong>
                 </div>
                 <div className="hero__gauge-body">
                   <div className="hero__gauge-labels">
-                    <div className="label-item"><span className="dot blue"></span> Pull-through</div>
-                    <div className="label-item"><span className="dot gray"></span> Stagnation</div>
+                    <div className="label-item"><span className="dot blue"></span> Funded</div>
+                    <div className="label-item"><span className="dot gray"></span> Stalled</div>
                   </div>
                   <div className="hero__gauge-visual">
                     <div className="gauge-circle">
-                      <span className="gauge-val">97.5%</span>
+                      <span className="gauge-val">135 / 246</span>
                     </div>
                   </div>
                 </div>
                 <div className="hero__gauge-footer">
-                  Production Goal: 4.89
+                  Monthly Target: 150 Loans
                 </div>
               </div>
             </div>
