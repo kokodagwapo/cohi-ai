@@ -550,7 +550,9 @@
 .hero__header-group {
   text-align: center;
   margin-top: 0.5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0;
+  position: relative;
+  z-index: 10;
 }
 
 .hero__title {
@@ -588,7 +590,8 @@
   display: flex;
   perspective: var(--hero-perspective);
   transform-style: preserve-3d;
-  margin-top: 0;
+  margin-top: -2.5rem;
+  z-index: 5;
 }
 
 /* Glow Lines */
