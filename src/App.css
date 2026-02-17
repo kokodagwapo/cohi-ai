@@ -873,8 +873,8 @@
 /* Laptop Assets - Adjusted size for Fullview */
 .hero__laptop-wrap {
   position: absolute;
-  bottom: clamp(12px, 5vw, 92px);
-  right: -5%; /* Moved further right (approx 1 inch) */
+  bottom: clamp(120px, 12vw, 240px);
+  right: -5%;
   width: clamp(700px, 70vw, 900px);
   z-index: 20;
 }
