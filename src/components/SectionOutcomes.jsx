@@ -33,9 +33,9 @@ const outcomes = [
 
 export default function SectionOutcomes() {
   return (
-    <section className="section section-outcomes" aria-labelledby="outcomes-title">
+    <section className="section section-outcomes" id="outcomes" aria-labelledby="outcomes-title">
       <h2 id="outcomes-title" className="section__title section__title--center">
-        The Edge: Outcomes That Compound
+        Why Coheus: Outcomes That Compound
       </h2>
       <p className="section__subtitle section__subtitle--center">
         Executive-grade intelligence for margin, risk, and speed. The clarity C-suite needs to act—and the confidence boards expect.

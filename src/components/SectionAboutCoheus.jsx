@@ -1,96 +1,40 @@
 import { useRef, useEffect, useState } from 'react'
 
-const STORYBOARD_PANELS = [
+const TOPTIERING_PANELS = [
   {
-    id: 'opening',
-    src: '/ugc/playbook/moneyball-mortgage-mismo.png',
-    title: 'Moneyball®, Mortgage, and MISMO®',
-    tagline: 'The Power of (Harmonized) Data',
-    copy: 'Baseball proved it: data beats intuition. Moving beyond volume to data-driven profitability.',
+    id: 'gap',
+    src: '/ugc/playbook/toptiering-gap.png',
+    title: 'The 200+ BP Performance Gap',
+    tagline: '$4.6M total revenue. 56 LOs. Only 7 in the Top Tier.',
+    copy: 'Revenue by Loan Officer tells the real story: a massive spread between your best and worst producers. Without structured ranking, your top performers go unrecognized and compensation stays disconnected from actual results.',
   },
   {
-    id: 'data-gap',
-    src: '/ugc/playbook/data-gap.png',
-    title: 'The Data Gap',
-    tagline: '',
-    copy: 'Interpretation gaps across parties and states. Focus on "Does this loan close?" instead of quality. Loan docs, narrative addenda, appraisal notes—disorganized, subjective, hard to measure.',
+    id: 'overview',
+    src: '/ugc/playbook/toptiering-overview.png',
+    title: 'Rank Every LO in Real Time',
+    tagline: 'One dashboard. Every metric that matters.',
+    copy: 'TopTiering Comparison gives you the full picture—revenue, units, BPS—ranked high to low across every loan officer. Filter by time period, switch between branch and LO views, and see exactly who drives production and who needs support.',
   },
   {
-    id: 'tale',
-    src: '/ugc/playbook/tale-of-two-industries.png',
-    title: 'A Tale of Two Industries',
-    tagline: 'MLB has Statcast-quality data. Mortgage? Not yet.',
-    copy: 'Baseball: data complete, coaching defined, comp tied to winning. Mortgage: data not Statcast quality, coaching undefined, comp tied to volume. Coheus changes that.',
+    id: 'coaching',
+    src: '/ugc/playbook/toptiering-coaching.png',
+    title: 'Drill Down to Every LO',
+    tagline: 'Revenue, units, BPS—per loan officer, on mobile.',
+    copy: 'Managers can pull up any loan officer\'s performance on their phone. See revenue contribution, unit volume, and basis points side by side. Spot gaps instantly and turn every 1:1 into a targeted coaching conversation backed by real data.',
   },
   {
-    id: 'philosophy',
-    src: '/ugc/playbook/philosophy-of-efficiency.png',
-    title: 'The Philosophy of Efficiency',
-    tagline: '',
-    copy: 'Traditional: Buying players (volume)—acquiring talent and loans at any cost. Moneyball: Buying wins (outcome)—optimizing efficiency and specific results.',
+    id: 'compensation',
+    src: '/ugc/playbook/toptiering-compensation.png',
+    title: 'See the Tiers. Align the Comp.',
+    tagline: 'Top Tier: $2.2M · Second Tier: $1.5M · Bottom Tier: $950K',
+    copy: '7 Top Tier LOs produce $2.2M at $308K avg revenue and 41 avg units. 35 Bottom Tier LOs produce $950K at $27K avg. When you see the tiers clearly, compensation conversations shift from volume to value—retain top talent and reduce costly turnover.',
   },
   {
-    id: 'data-to-coaching',
-    src: '/ugc/playbook/data-to-coaching.png',
-    title: 'From Data to Coaching',
-    tagline: 'You cannot coach what you cannot measure.',
-    copy: 'Narrative addenda (subjective) → machine-readable consistency (objective) → analyzable for quality, compliance, and performance.',
-  },
-  {
-    id: 'efficiency-hierarchy',
-    src: '/ugc/playbook/efficiency-hierarchy.png',
-    title: 'The Efficiency Hierarchy',
-    tagline: '',
-    copy: 'Top tier: efficient winners. Median: the pack. Bottom: expensive non-winners. Cleveland Guardians ($1.13M/win), Milwaukee Brewers ($1.14M/win)—low payroll, high wins.',
-  },
-  {
-    id: 'blue-tier',
-    src: '/ugc/playbook/blue-tier-efficient.png',
-    title: 'Blue Tier: The Efficient Winners',
-    tagline: '',
-    copy: 'High volume (payroll) isn\'t required for the best outcome. Optimized behaviors win.',
-  },
-  {
-    id: 'green-tier',
-    src: '/ugc/playbook/green-tier-expensive.png',
-    title: 'Green Tier: Expensive Non-Winners',
-    tagline: '',
-    copy: 'Burning cash. High compensation without data-driven coaching results in inefficiency.',
-  },
-  {
-    id: 'scorecard',
-    src: '/ugc/playbook/scorecard-spending-winning.png',
-    title: 'The 2025 Scorecard: Spending vs. Winning',
-    tagline: '',
-    copy: 'Dodgers, Brewers, Yankees, Guardians—Cost Per Win reveals who buys wins vs. who buys players.',
-  },
-  {
-    id: 'technology',
-    src: '/ugc/playbook/technology-of-truth.png',
-    title: 'The Technology of Truth',
-    tagline: 'Hawk-Eye-based optical camera system',
-    copy: 'Seven terabytes per game. 17 petabytes per season. Pitch metrics, batted ball, route efficiency—precise, standardized, immutable.',
-  },
-  {
-    id: 'statcast',
-    src: '/ugc/playbook/statcast-ecosystem.png',
-    title: 'MoneyBall® 2.0: The Statcast Ecosystem',
-    tagline: '',
-    copy: 'Pitch metrics, batted ball, route efficiency, positioning heat maps. Mortgage\'s Statcast is MISMO.',
-  },
-  {
-    id: 'mismo',
-    src: '/ugc/playbook/mismo-statcast.png',
-    title: 'MISMO®: The Statcast of Mortgage',
-    tagline: 'Mortgage Industry Standards Maintenance Organization',
-    copy: 'Turn every loan, document, and appraisal into structured, validated fields. Machine-readable, consistent, analyzable at scale.',
-  },
-  {
-    id: 'winning-strategy',
-    src: '/ugc/playbook/winning-strategy.png',
-    title: 'The Winning Strategy',
-    tagline: '',
-    copy: 'Move from Green Tier (High Cost) to Blue Tier (Efficient Winner). Adopt MISMO standards. Don\'t just buy players. Buy wins.',
+    id: 'impact',
+    src: '/ugc/playbook/toptiering-impact.png',
+    title: 'Stop Looking in the Rear-View Mirror',
+    tagline: '28 at-risk loans. $10.58M in volume. Predicted before it\'s lost.',
+    copy: 'Fallout Predictions identify loans likely to withdraw or deny before margin is lost. See every at-risk loan with confidence scores, amounts, milestones, and the loan officer responsible—so you can act now instead of reporting losses later.',
   },
 ]
 
@@ -158,24 +102,15 @@ export default function SectionAboutCoheus() {
   return (
     <section id="about-coheus" className="section section-about-coheus section-about-coheus--storyboard" aria-labelledby="about-coheus-title">
       <div className="section-about-coheus__inner">
-        <header ref={headerRef} className={`section-about-coheus__header ${headerInView ? 'section-about-coheus__header--visible' : ''}`}>
-          <h2 id="about-coheus-title" className="section__title section__title--center">
-            The Playbook
-          </h2>
-          <p className="section-about-coheus__header-lead">
-            From data chaos to coaching clarity. A storyboard of how harmonized data changes the game.
-          </p>
-        </header>
-
         <div className="section-about-coheus__storyboard">
-          {STORYBOARD_PANELS.map((panel, i) => (
+          {TOPTIERING_PANELS.map((panel, i) => (
             <StoryboardPanel key={panel.id} panel={panel} index={i} />
           ))}
         </div>
 
         <blockquote ref={quoteRef} className={`section-about-coheus__quote ${quoteInView ? 'section-about-coheus__quote--visible' : ''}`}>
-          &ldquo;The goal shouldn&rsquo;t be to buy players. What you want to buy is wins. To buy wins, you buy runs.&rdquo;
-          <cite>— Peter Brand</cite>
+          &ldquo;You can&rsquo;t manage what you can&rsquo;t measure. TopTiering turns loan officer data into actionable intelligence.&rdquo;
+          <cite>— The Coheus Philosophy</cite>
         </blockquote>
 
         <div className="section-about-coheus__cta-wrap">
@@ -184,7 +119,7 @@ export default function SectionAboutCoheus() {
             className="cta section-about-coheus__cta"
             onClick={() => document.getElementById('cohi-in-action')?.scrollIntoView({ behavior: 'smooth', block: 'start' })}
           >
-            See the Stats
+            Explore the Platform
           </button>
         </div>
       </div>

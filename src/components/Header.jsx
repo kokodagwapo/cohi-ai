@@ -3,9 +3,10 @@ import { Link } from 'react-router-dom'
 
 const NAV_LINKS = [
   { href: '/#hero', label: 'Home' },
-  { href: '/#cohi-in-action', label: 'The Stats' },
-  { href: '/#outcomes', label: 'The Edge' },
-  { href: '/#about-coheus', label: 'The Playbook' },
+  { href: '/#cohi-in-action', label: 'Platform' },
+  { href: '/#outcomes', label: 'Why Coheus' },
+  { href: '/#about-coheus', label: 'TopTiering' },
+  { href: '/#contact', label: 'Get Started' },
   { href: '/#contact', label: 'Contact' },
 ]
 
@@ -28,18 +29,18 @@ export default function Header({ theme, onThemeToggle }) {
         <button
           type="button"
           className="header__menu-btn"
-          onClick={() => setDrawerOpen(true)}
-          aria-label="Open menu"
+          onClick={() => setDrawerOpen(!drawerOpen)}
+          aria-label={drawerOpen ? 'Close menu' : 'Open menu'}
           aria-expanded={drawerOpen}
         >
-          ☰
+          {drawerOpen ? '✕' : '☰'}
         </button>
 
         <div className={`header__drawer ${drawerOpen ? 'header__drawer--open' : ''}`}>
           <nav className="header__nav" aria-label="Main navigation">
             <ul className="header__nav-list">
               {NAV_LINKS.map(({ href, label }) => (
-                <li key={href}>
+                <li key={label}>
                   <a href={href} className="header__nav-link" onClick={closeDrawer}>
                     {label}
                   </a>
