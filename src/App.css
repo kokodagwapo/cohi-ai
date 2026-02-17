@@ -1195,22 +1195,22 @@
 }
 
 [data-theme='dark'] .glass-panel {
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  border-color: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(32px);
+  -webkit-backdrop-filter: blur(32px);
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
 [data-theme='dark'] .hero__card-main-text {
-  color: #e2e8f0;
+  color: #1a1a1a;
 }
 
 [data-theme='dark'] .hero__card-detail-text {
-  color: #cbd5e1;
+  color: #333333;
 }
 
 [data-theme='dark'] .hero__info-card-content p {
-  color: #e2e8f0;
+  color: #1a1a1a;
 }
 
 /* Responsive Overrides */
