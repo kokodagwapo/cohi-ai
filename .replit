@@ -1,9 +1,8 @@
-modules = ["nodejs-20", "web"]
+modules = ["nodejs-20"]
+
 [agent]
 expertMode = true
-
-[nix]
-channel = "stable-25_05"
+integrations = ["javascript_openai_ai_integrations:2.0.0"]
 
 [workflows]
 runButton = "Project"
@@ -21,19 +20,31 @@ args = "Start application"
 name = "Start application"
 author = "agent"
 
+[workflows.workflow.metadata]
+outputType = "webview"
+
 [[workflows.workflow.tasks]]
 task = "shell.exec"
 args = "npm run dev"
 waitForPort = 5000
 
-[workflows.workflow.metadata]
-outputType = "webview"
+[[ports]]
+localPort = 3001
+externalPort = 3001
+
+[[ports]]
+localPort = 3002
+externalPort = 3002
 
 [[ports]]
 localPort = 5000
 externalPort = 80
 
 [deployment]
-deploymentTarget = "static"
+deploymentTarget = "autoscale"
 build = ["npm", "run", "build"]
 publicDir = "dist"
+run = ["node", "server/tts-proxy.js"]
+
+[nix]
+channel = "stable-25_05"
