@@ -177,10 +177,10 @@
 }
 
 [data-theme='dark'] .header {
-  background: rgba(18, 18, 26, 0.05);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  background: rgba(18, 18, 26, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .header__inner {
@@ -1196,6 +1196,19 @@
 
 [data-theme='dark'] .glass-panel {
   background: rgba(18, 18, 26, 0.85);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme='dark'] .hero__card-main-text {
+  color: #e2e8f0;
+}
+
+[data-theme='dark'] .hero__card-detail-text {
+  color: #cbd5e1;
+}
+
+[data-theme='dark'] .hero__info-card-content p {
+  color: #e2e8f0;
 }
 
 /* Responsive Overrides */
