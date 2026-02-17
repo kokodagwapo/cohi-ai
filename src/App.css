@@ -719,6 +719,14 @@
   font-weight: 500;
 }
 
+.hero__card-detail-text {
+  font-size: 0.8rem;
+  line-height: 1.4;
+  color: #111;
+  margin: 0.4rem 0 0;
+  font-weight: 400;
+}
+
 /* Progress Bar */
 .hero__card-bar-container {
   display: flex;

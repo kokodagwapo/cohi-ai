@@ -54,13 +54,9 @@ export default function Hero() {
               <p className="hero__card-main-text">
                 Conditions per active loan averaged 32.8, above the 5-condition threshold.
               </p>
-              <div className="hero__card-tag-row">
-                <span className="hero__inline-tag yellow">32.8 Conditions per active loan</span>
-                <div className="hero__mini-stats">
-                  <div>Prior Avg: 18.4</div>
-                  <div>Threshold: 5 per loan</div>
-                </div>
-              </div>
+              <p className="hero__card-detail-text">
+                Prior average: 18.4 conditions per loan. Current threshold: 5 per loan.
+              </p>
             </div>
 
             <div className="hero__floating-card hero__floating-card--working glass-panel">
