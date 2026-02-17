@@ -621,11 +621,11 @@
 .hero__side-cards--left {
   position: absolute;
   left: 5%;
-  top: 4%;
+  top: 2%;
   transform: rotateY(25deg);
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 1.25rem;
   z-index: 10;
 }
 

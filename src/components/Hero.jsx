@@ -72,6 +72,17 @@ export default function Hero() {
                 </div>
               </div>
             </div>
+
+            <div className="hero__floating-card hero__floating-card--working glass-panel">
+              <div className="hero__card-label">
+                <span className="hero__status-dot hero__status-dot--blue">✓</span>
+                <span className="hero__status-text">What's Working</span>
+                <div className="hero__card-controls"><span>+</span> <span>🕗</span></div>
+              </div>
+              <p className="hero__card-main-text">
+                135 of 246 loans converted to funded status this period. Average cycle time dropped to 32 days, with revenue on track at $400K across 106 active pipeline loans.
+              </p>
+            </div>
           </div>
 
           {/* Right Assets Layer */}
