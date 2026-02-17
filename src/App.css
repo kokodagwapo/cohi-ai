@@ -164,8 +164,10 @@
 
 /* Header – clear with subtle blur */
 .header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 100;
   background: transparent;
   backdrop-filter: blur(10px);
