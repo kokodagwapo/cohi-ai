@@ -1176,15 +1176,15 @@
 
 /* Glass Panel Utility */
 .glass-panel {
-  background: rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border: 1px solid var(--glass-border);
   box-shadow: var(--glass-shadow);
 }
 
 [data-theme='dark'] .glass-panel {
-  background: rgba(18, 18, 26, 0.35);
+  background: rgba(18, 18, 26, 0.45);
 }
 
 /* Responsive Overrides */
