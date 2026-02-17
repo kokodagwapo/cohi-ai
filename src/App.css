@@ -436,7 +436,7 @@
     flex: 1;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
     gap: 1rem;
     margin-right: 0.5rem;
     border-right: none;
@@ -448,19 +448,20 @@
 
   .header__nav {
     flex: none;
-    margin-right: 0.5rem;
   }
 
   .header__nav-list {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: flex-end;
+    justify-content: center;
+    gap: 0.25rem;
   }
 
   .header__nav-link {
-    padding: 0.4rem 0.75rem;
+    padding: 0.5rem 1rem;
     margin-bottom: 0;
-    font-size: 0.9rem;
+    font-size: 1.0625rem;
+    font-weight: 600;
   }
 
   .header__theme-toggle {
