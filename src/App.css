@@ -1078,8 +1078,8 @@
 
 .hero__phone-wrap {
   position: absolute;
-  bottom: clamp(-44px, 5vw, 36px);
-  right: 5%; /* Moved right approx 1/2 inch */
+  bottom: clamp(100px, 12vw, 180px);
+  right: 5%;
   width: clamp(180px, 17vw, 240px);
   z-index: 40;
   animation: floatPhone 6s ease-in-out infinite;
