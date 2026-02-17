@@ -1,8 +1,31 @@
 const UGC_ITEMS = [
-  { src: '/brand/cohi-insights-desktop.png', title: 'Cohi Insights', caption: 'AI-curated executive briefings by urgency—Critical, Needs Attention, What\'s Working, Context & Trends. See what moves the needle before it shows up in P&L.' },
-  { src: '/brand/brand-12.png', title: 'Revenue by LO: The Pareto', caption: 'Identify who carries the load—e.g., 9 loan officers carrying 44. Top/Second/Bottom tier breakdown reveals hidden value and concentration risk.' },
-  { src: '/brand/brand-14.png', title: 'Daily Briefing', caption: 'Revenue insights and pipeline alerts on one screen; MBA market data and refinance activity on the other. Intelligence before the first call.' },
-  { src: '/brand/fallout-loan-detail.png', title: 'Fallout & Closing Intelligence', caption: 'Track loans at risk of falling out, monitor closing timelines, and surface pipeline slippage early. Intervene when it matters—not after the quarter closes.' },
+  {
+    src: '/brand/cohi-insights-desktop.png',
+    headline: 'Your Daily Executive Briefing.',
+    title: 'Cohi Insights',
+    caption: 'AI-curated executive briefings by urgency—Critical, Needs Attention, What\'s Working, Context & Trends. See what moves the needle before it shows up in P&L.',
+  },
+  {
+    src: '/brand/brand-12.png',
+    headline: 'The Pareto Visualization:',
+    headlineSub: 'Revenue Concentration',
+    title: 'Revenue by LO: The Pareto',
+    caption: 'Identify who carries the load—e.g., 9 loan officers carrying 44. Top/Second/Bottom tier breakdown reveals hidden value and concentration risk.',
+  },
+  {
+    src: '/brand/brand-14.png',
+    headline: 'The Daily Briefing:',
+    headlineSub: 'Actionable Intelligence Before Coffee',
+    title: 'Daily Briefing',
+    caption: 'Revenue insights and pipeline alerts on one screen; MBA market data and refinance activity on the other. Intelligence before the first call.',
+  },
+  {
+    src: '/brand/fallout-loan-detail.png',
+    headline: 'Closings & Fallout Forecast',
+    headlineSub: 'Predictive Pipeline Intelligence',
+    title: 'Fallout & Closing Intelligence',
+    caption: 'Track loans at risk of falling out, monitor closing timelines, and surface pipeline slippage early. Intervene when it matters—not after the quarter closes.',
+  },
 ]
 
 export default function SectionUgc() {
@@ -15,9 +38,15 @@ export default function SectionUgc() {
         Mortgage-native metrics that separate winners from the field—briefings, TopTiering, and pipeline visibility built for lenders who demand precision.
       </p>
       <div className="ugc-section__grid">
-        {UGC_ITEMS.map(({ src, title, caption }) => (
+        {UGC_ITEMS.map(({ src, headline, headlineSub, title, caption }) => (
           <figure key={src} className="ugc-section__card">
             <div className="ugc-section__frame">
+              <div className="ugc-section__frame-header">
+                <h3 className="ugc-section__frame-headline">{headline}</h3>
+                {headlineSub && (
+                  <p className="ugc-section__frame-headline-sub">{headlineSub}</p>
+                )}
+              </div>
               <img
                 src={src}
                 alt=""
