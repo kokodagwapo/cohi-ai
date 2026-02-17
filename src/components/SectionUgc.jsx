@@ -20,7 +20,7 @@ const UGC_ITEMS = [
     caption: 'Revenue insights and pipeline alerts on one screen; MBA market data and refinance activity on the other. Intelligence before the first call.',
   },
   {
-    src: '/brand/fallout-loan-detail.png',
+    src: '/brand/closings-fallout-forecast.png',
     headline: 'Closings & Fallout Forecast',
     headlineSub: 'Predictive Pipeline Intelligence',
     title: 'Fallout & Closing Intelligence',
